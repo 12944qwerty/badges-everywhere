@@ -59,7 +59,6 @@ export default function Badges(getImageUrl: (id: string) => string) {
     if (user && user.badges) {
       let badges = user.badges
         .map((badge) => {
-          console.log(badge);
           badge.src = getImageUrl(badge.icon);
 
           for (const key in BadgeSettingMapping) {
